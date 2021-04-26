@@ -5,7 +5,7 @@
 In todays app we are going to create a small app that will do the following:
 
 - Display our pets (name, image)
-- We wil be also patting our cats on their heads!
+- We wil be also petting our cats on their heads!
 - Prettify our page using [react bootstrap](https://react-bootstrap.github.io/getting-started/introduction/#installation)
 
 ___

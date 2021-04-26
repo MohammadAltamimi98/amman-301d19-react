@@ -1,21 +1,20 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 
 class ChildCat extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            numberOfPats: 0
+            numberOfPets: 0
         }
     }
 
-    increaseNumberOfPats = () => {
+    increaseNumberOfPets = () => {
         this.setState(
             {
-                numberOfPats: this.state.numberOfPats + 1
+                numberOfPets: this.state.numberOfPets + 1
             }
         );
     }
@@ -23,25 +22,25 @@ class ChildCat extends React.Component {
         return (
             <div>
                 <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={this.props.imgUrl} />
+                    <Card.Img onClick={this.increaseNumberOfPets} variant="top" src={this.props.imgUrl} />
                     <Card.Body>
                         <Card.Title>I am the Child</Card.Title>
                         <Card.Text>
                             My name is {this.props.catName}
                         </Card.Text>
                         <Card.Text>
-                            👋
-                    {this.state.numberOfPats}
+                            Click on my picture to pet me!
                         </Card.Text>
-                        <Button onClick={this.increaseNumberOfPats} variant="primary">Increase pats</Button>
+                        <Card.Text>👋 {this.state.numberOfPets}
+                        </Card.Text>
                     </Card.Body>
                 </Card>
                 {/* <h3>I am the Child</h3>
                 <p>My name is {this.props.catName}</p>
                 <p>👋
-                    {this.state.numberOfPats}
+                    {this.state.numberOfPets}
                 </p>
-                <img onClick={this.increaseNumberOfPats} width={300} src={this.props.imgUrl} alt={this.props.catName} /> */}
+                <img onClick={this.increaseNumberOfPets} width={300} src={this.props.imgUrl} alt={this.props.catName} /> */}
             </div>
         )
     }
