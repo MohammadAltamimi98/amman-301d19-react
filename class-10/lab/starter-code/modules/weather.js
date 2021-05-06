@@ -15,16 +15,15 @@ function getWeather(latitude, longitude) {
     days: 5,
   };
 
-  if (cache[key] && (Date.now() - cache[key].timestamp < 50000)) {
+  if (cache[key]) {
     console.log('Cache hit');
   } else {
     console.log('Cache miss');
     cache[key] = {};
-    cache[key].timestamp = Date.now();
     cache[key].data = superagent.get(url)
-    .then(response => parseWeather(response.body));
+      .then(response => parseWeather(response.body));
   }
-  
+
   return cache[key].data;
 }
 
@@ -42,6 +41,5 @@ function parseWeather(weatherData) {
 class Weather {
   constructor(day) {
     this.forecast = day.weather.description;
-    this.time = day.datetime;
   }
 }
