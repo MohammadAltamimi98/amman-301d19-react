@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import Form from './Form';
 import PrintFood from './PrintFood';
 import axios from 'axios';
-
+import Button from 'react-bootstrap/esm/Button';
+import People from './People';
+import PeopleForm from './PeopleForm';
 export class Main extends Component {
 
     constructor(props) {
@@ -11,7 +13,13 @@ export class Main extends Component {
             cityName: this.props.cityName,
             name: 'Mohammad Fadi',
             data: [],
-            shown: false
+            peopleData: [],
+            shown: false,
+            showPeople: false,
+            searchName: '',
+            searchRole: '',
+            locationData: {},
+            showLocation: false
         }
     }
 
@@ -33,6 +41,45 @@ export class Main extends Component {
         console.log(this.state.name);
     }
 
+    getPeople = async (e) => {
+        e.preventDefault();
+        const myParams = {
+            params: {
+                name: this.state.searchName,
+                role: this.state.searchRole
+            }
+        };
+        const req = await axios.get('http://localhost:8080/people', myParams);
+        console.log(req.data);
+        this.setState({
+            peopleData: req.data.people,
+            showPeople: true,
+            searchName: '',
+            searchRole: ''
+        });
+    }
+
+    updateSearchName = (e) => {
+        this.setState({
+            searchName: e.target.value
+        })
+    }
+
+    updateSearchRole = (e) => {
+        this.setState({
+            searchRole: e.target.value
+        })
+    }
+
+    getLocation = async () => {
+        const req = await axios.get('http://localhost:8080/location');
+        console.log(req.data);
+        this.setState({
+            locationData: req.data,
+            showLocation: true
+        });
+    }
+
     render() {
         console.log(this.props);
         return (
@@ -47,11 +94,38 @@ export class Main extends Component {
                     updateName={this.updateName}
                     submitForm={this.submitForm}
                 />
+
+                <Button onClick={this.getPeople}>Get people Info!</Button>
+                <Button onClick={this.getLocation}>Get Location Info!</Button>
+
+                <PeopleForm
+                    updateSearchName={this.updateSearchName}
+                    updateSearchRole={this.updateSearchRole}
+                    getPeople={this.getPeople}
+                />
                 {this.state.shown &&
 
                     <PrintFood
                         recipes={this.state.data}
                     />
+
+                }
+
+                {this.state.showPeople &&
+
+                    <People
+                        people={this.state.peopleData}
+                    />
+
+                }
+
+                {this.state.showLocation &&
+
+                    <div>
+                        <p>{this.state.locationData.name}</p>
+                        <p>{this.state.locationData.lat}</p>
+                        <p>{this.state.locationData.lon}</p>
+                    </div>
 
                 }
             </div>
