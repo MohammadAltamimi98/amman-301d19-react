@@ -1,0 +1,144 @@
+{
+    "people": [
+        {
+            "name": "Ameen Saleh",
+            "role": "student"
+        },
+        {
+            "name": "Amro Lutfi Nazzal",
+            "role": "Student"
+        },
+        {
+            "name": "sufian hamdan",
+            "role": "Student"
+        },
+        {
+            "name": "Mohammad Aqel",
+            "role": "Student"
+        },
+        {
+            "name": "Qusai AlAmarat",
+            "role": "Student"
+        },
+        {
+            "name": "mohammad jaradat",
+            "role": "Student"
+        },
+        {
+            "name": "Mohammad  Barqawi",
+            "role": "Student"
+        },
+        {
+            "name": "Mohammad Altamimi",
+            "role": "Student"
+        },
+        {
+            "name": "Hatem Husnieh",
+            "role": "Student"
+        },
+        {
+            "name": "laith aloudat",
+            "role": "Student"
+        },
+        {
+            "name": "Yaser Alananbeh",
+            "role": "Student"
+        },
+        {
+            "name": "Dania Abughaush",
+            "role": "Student"
+        },
+        {
+            "name": "Ibrahim Abuawad",
+            "role": "Student"
+        },
+        {
+            "name": "Aseel Hamamreh",
+            "role": "Student"
+        },
+        {
+            "name": "Dina Khaleel",
+            "role": "Student"
+        },
+        {
+            "name": "Abeer Al-rafati",
+            "role": "Student"
+        },
+        {
+            "name": "Yousef Salem",
+            "role": "Student"
+        },
+        {
+            "name": "Mohammad Abu-mattar",
+            "role": "Student"
+        },
+        {
+            "name": "Abdallah Abu Khurma",
+            "role": "Student"
+        },
+        {
+            "name": "Mahmoud Alashqar",
+            "role": "Student"
+        },
+        {
+            "name": "Rula Al-Qasem",
+            "role": "Student"
+        },
+        {
+            "name": "mohammad Almajeed jaradat",
+            "role": "Student"
+        },
+        {
+            "name": "Sa'ed Jabali",
+            "role": "Student"
+        },
+        {
+            "name": "Abde Rahman Abughnaim",
+            "role": "Student"
+        },
+        {
+            "name": "Enas Batayneh",
+            "role": "Student"
+        },
+        {
+            "name": "Maryam Alowdat",
+            "role": "Student"
+        },
+        {
+            "name": "Ayah Za'arir",
+            "role": "Student"
+        },
+        {
+            "name": "Murad Alshorman",
+            "role": "Student"
+        },
+        {
+            "name": "Sokiyna Abu Abuhammad",
+            "role": "Student"
+        },
+        {
+            "name": "Ahmad Ammoura",
+            "role": "Student"
+        },
+        {
+            "name": "Ali Rahhal",
+            "role": "Student"
+        },
+        {
+            "name": "Mohmmad Fadi",
+            "role": "TA"
+        },
+        {
+            "name": "Sally",
+            "role": "TA"
+        },
+        {
+            "name": "Sondos",
+            "role": "TA"
+        },
+        {
+            "name": "Anolla",
+            "role": "TA"
+        }
+    ]
+}
