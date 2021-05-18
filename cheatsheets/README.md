@@ -7,3 +7,5 @@ Table of content:
 - [Netlify Cheat Sheet](content/netlify.md).
 - [Heroku Cheat Sheet](content/heroku.md).
 - [.env Cheat Sheet](content/env.md).
+- [Mongo Cheat Sheet](content/mongo.md).
+- [Mongoose Cheat Sheet](content/mongoose.md).
