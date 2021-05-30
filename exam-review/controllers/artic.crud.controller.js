@@ -36,7 +36,7 @@ const createFavoriteArtPiece = async (req, res) => {
             // saving the instance data to our DB
             newArtPiece.save();
             // sending back the response to the user with the newly created Data
-            res.send(newArtPiece);
+            res.send('Item Added to your favorite list!');
         }
     });
 
@@ -55,7 +55,13 @@ const deleteFavoriteArtPiece = async (req, res) => {
         if (error) {
             res.send(error);
         } else {
-            res.send(data)
+
+            // use this one
+            // res.send(data);
+            // or send back the data after deleting the item
+            artPiece.find({}, (error, data) => {
+                res.send(data);
+            });
         }
     });
 
@@ -72,7 +78,9 @@ const updateFavoriteArtPiece = async (req, res) => {
         } else {
             data[0].description = description;
             data[0].save();
-            res.send(data);
+            artPiece.find({}, (error, data) => {
+                res.send(data);
+            });
         }
     });
 };
